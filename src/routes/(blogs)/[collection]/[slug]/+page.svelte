@@ -8,14 +8,16 @@
         headings?: Array<{ level: number; id: string; text: string }>;
     }
 
-let { data }: { data: PageData } = $props();
+    let { data }: { data: PageData } = $props();
 
-    let htmlContent = marked.parse(data.post?.body ?? '') as string;
-
-    htmlContent = htmlContent.replace(/<h2>(.*?)<\/h2>/g, (match, text) => {
-        const cleanText = text.replace(/<[^>]*>?/gm, ''); 
-        const id = cleanText.toLowerCase().replace(/[^\w]+/g, '-');
-        return `<h2 id="${id}">${text}</h2>`;
+    let htmlContent = $derived.by(() => {
+        let parsed = marked.parse(data.post?.body ?? '', { gfm: true }) as string;
+        
+        return parsed.replace(/<h2>(.*?)<\/h2>/g, (match, text) => {
+            const cleanText = text.replace(/<[^>]*>?/gm, ''); 
+            const id = cleanText.toLowerCase().replace(/[^\w]+/g, '-');
+            return `<h2 id="${id}">${text}</h2>`;
+        });
     });
 
     const formatDate = (date: string) => {
@@ -116,5 +118,17 @@ let { data }: { data: PageData } = $props();
         border: 4px solid black; 
         border-radius: 1rem; 
         box-shadow: 8px 8px 0px black; 
+    }
+    :global(.prose :not(pre) > code) {
+    background-color: #f3f4f6;
+    padding: 0.2em 0.4em;
+    border-radius: 0.375rem;
+    font-family: monospace;
+    font-weight: 600;
+    }
+
+    :global(.prose code::before), 
+    :global(.prose code::after) {
+        content: none !important;
     }
 </style>
