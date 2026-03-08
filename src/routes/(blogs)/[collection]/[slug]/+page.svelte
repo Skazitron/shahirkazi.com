@@ -5,19 +5,25 @@
     interface PageData {
         post?: { body?: string; title?: string; timestamp?: string };
         allPosts?: Array<{ slug: string; title: string; timestamp?: string }>;
-        headings?: Array<{ level: number; id: string; text: string }>;
     }
 
     let { data }: { data: PageData } = $props();
 
-    let htmlContent = $derived.by(() => {
-        let parsed = marked.parse(data.post?.body ?? '', { gfm: true }) as string;
+    let parsedContent = $derived.by(() => {
+        let rawHtml = marked.parse(data.post?.body ?? '', { gfm: true }) as string;
+        let generatedHeadings: Array<{ level: number; id: string; text: string }> = [];
         
-        return parsed.replace(/<h2>(.*?)<\/h2>/g, (match, text) => {
+        let htmlWithIds = rawHtml.replace(/<h([1-6])>(.*?)<\/h\1>/g, (match, levelStr, text) => {
+            const level = parseInt(levelStr, 10);
             const cleanText = text.replace(/<[^>]*>?/gm, ''); 
             const id = cleanText.toLowerCase().replace(/[^\w]+/g, '-');
-            return `<h2 id="${id}">${text}</h2>`;
+            
+            generatedHeadings.push({ level: level, id: id, text: cleanText });
+            
+            return `<h${levelStr} id="${id}">${text}</h${levelStr}>`;
         });
+
+        return { html: htmlWithIds, headings: generatedHeadings };
     });
 
     const formatDate = (date: string) => {
@@ -62,19 +68,18 @@
                         Published: {formatDate(data.post?.timestamp ?? '')}
                     </p>
                 </header>
-
                 <div class="prose prose-xl prose-black max-w-none font-medium leading-snug">
-                    {@html htmlContent}
+                    {@html parsedContent.html}
                 </div>
             </article>
         </main>
 
         <aside class="hidden lg:block lg:col-span-2 sticky top-32 h-fit">
-            {#if data.headings && data.headings.length > 0}
+            {#if parsedContent.headings && parsedContent.headings.length > 0}
                 <div class="border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-red-400 rounded-xl">
                     <h3 class="font-black uppercase italic mb-4 border-b-2 border-black pb-2">On this page</h3>
                     <ul class="space-y-2">
-                        {#each data.headings as heading}
+                        {#each parsedContent.headings as heading}
                             <li style="margin-left: {(heading.level - 1) * 10}px">
                                 <a href="#{heading.id}" class="text-sm font-bold hover:bg-black hover:text-white px-1 transition-colors block">
                                     # {heading.text}
