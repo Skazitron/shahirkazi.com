@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="mt-16 flex justify-center border-t-4 border-dashed border-black pt-8 max-w-[1600px] mx-auto">
+    <div class="mt-16 flex justify-center border-t-4 border-dashed border-black pt-8 max-w-400 mx-auto">
         <button 
             onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             class="inline-block bg-black text-white px-6 py-2 font-black uppercase tracking-widest text-sm hover:bg-yellow-300 hover:text-black hover:scale-110 transition-all border-4 border-transparent hover:border-black cursor-pointer"

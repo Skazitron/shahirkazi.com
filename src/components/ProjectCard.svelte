@@ -25,7 +25,7 @@
         
         <h3 class="text-2xl font-black mb-2 leading-tight">{title}</h3>
         
-        <p class="text-sm text-gray-700 font-medium leading-relaxed flex-grow">
+        <p class="text-sm text-gray-700 font-medium leading-relaxed grow">
             {description}
         </p>
 

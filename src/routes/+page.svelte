@@ -270,16 +270,16 @@
             Hey, I'm Shahir. 
             
             <span class="block text-2xl lg:text-4xl font-black mt-6 leading-[1.8] text-black">
-                I&nbsp;engineer
+                I&nbsp;build
                 
                 <span class="inline-block bg-blue-500 text-white border-4 border-black px-3 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg] hover:rotate-1 transition-transform cursor-default mx-1 my-2 lg:my-3">
-                    high-performance interfaces
+                    webites
                 </span> 
                 
                 and 
                 
                 <span class="inline-block bg-red-400 text-black border-4 border-black px-3 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[1deg] hover:-rotate-1 transition-transform cursor-default mx-1 my-2 lg:my-3">
-                    open-source ecosystems
+                    stuff
                 </span>.
             </span>
         </h1>
