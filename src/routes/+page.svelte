@@ -273,7 +273,7 @@
                 I&nbsp;build
                 
                 <span class="inline-block bg-blue-500 text-white border-4 border-black px-3 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg] hover:rotate-1 transition-transform cursor-default mx-1 my-2 lg:my-3">
-                    webites
+                    apps
                 </span> 
                 
                 and 
