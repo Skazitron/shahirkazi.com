@@ -6,10 +6,13 @@
                 Shahir Kazi
             </h2>
             <p class="font-bold text-black uppercase text-sm tracking-widest mt-4">
-                © {new Date().getFullYear()} All Rights Reserved.
+                © {new Date().getFullYear()} Shahir Kazi.
             </p>
             <p class="font-bold text-gray-500 text-xs mt-1 uppercase">
                 Built with Svelte & An Excellent Sense of Design.
+            </p>
+            <p class="font-bold text-gray-500 text-xs mt-1 uppercase">
+                Site content is licensed under CC BY 4.0. Source code is licensed under GPL-3.0.
             </p>
         </div>
 

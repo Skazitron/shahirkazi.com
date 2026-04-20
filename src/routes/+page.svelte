@@ -1,4 +1,12 @@
 <script lang="ts">
+    /*
+     * This file is part of shahirkazi.com.
+     *
+     * shahirkazi.com is free software: you can redistribute it and/or modify
+     * it under the terms of the GNU General Public License as published by
+     * the Free Software Foundation, version 3.
+     */
+
     import { onMount } from "svelte";
     import Icon from "@iconify/svelte";
     import ProjectCard from "../components/ProjectCard.svelte";
