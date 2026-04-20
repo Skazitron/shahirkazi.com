@@ -1,10 +1,10 @@
 # Welcome to the source code for my portfolio website!
 - Check it out live at [shahirkazi.com](https://www.shahirkazi.com)
 - You are free to run it locally.
-- You are allowed to copy this template (see license)
+- You are allowed to copy this template (see [license](https://github.com/Skazitron/shahirkazi.com/tree/main?tab=License-1-ov-file))
 - Amazing SEO
 
-## To run it locall
+## To run it locally
 - Clone the repo
 - cd to the dir
 - Run `npm install`
