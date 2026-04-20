@@ -1,5 +1,3 @@
-# Site Licenses
-
 This repository contains both the source code and the original content for this website. They are licensed separately to ensure the code remains open-source while the content requires attribution.
 
 ## 1. Source Code License (GNU GPLv3)
