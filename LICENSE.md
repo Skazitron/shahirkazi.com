@@ -8,9 +8,7 @@ All source code, including Svelte components, scripts, styling, and configuratio
 
 > **Quick Summary:** You may copy, distribute, and modify the software as long as you track changes/dates in source files. Any modifications to or software including (via compiler) GPL-licensed code must also be made available under the GPL along with build & install instructions.
 
-<details>
-<summary><strong>Click here to read the full GPL-3.0 License text</strong></summary>
-
+```
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -685,7 +683,7 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
-</details>
+```
 
 ## 2. Content License (CC BY 4.0)
 
