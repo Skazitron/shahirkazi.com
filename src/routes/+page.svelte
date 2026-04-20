@@ -53,8 +53,8 @@
     let activeTooltip = $state<string | null>(null);
 
     let favoriteSkills = [
-        "Python", "Numpy", "Polars", "Go", "Rust", 
-        "PyTorch", "Svelte", "TypeScript", "PostgresQL", "Apache Druid"
+        "Python", "Go", "Svelte", "TypeScript", "React",
+        "Rust", "Data Science", "Quantitative Trading",
     ];
 
     let skills = [
