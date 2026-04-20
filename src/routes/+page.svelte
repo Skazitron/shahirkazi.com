@@ -482,7 +482,7 @@
             <div class="space-y-6">
                 <div>
                     <h4 class="text-lg font-black uppercase tracking-widest flex items-center gap-2">
-                        <span class="text-2xl">🏋️‍♂️</span> Iron & Sweat
+                        Gym
                     </h4>
                     <p class="text-md font-medium text-gray-801 mt-2 leading-snug">
                         Regularly moving heavy circles at the Córdova Rec Center. 
@@ -498,7 +498,7 @@
 
                 <div>
                     <h4 class="text-lg font-black uppercase tracking-widest flex items-center gap-2">
-                        <span class="text-2xl">🍿</span> Favorite Movies
+                        Favorite Movies
                     </h4>
                     <p class="text-md font-medium text-gray-800 mt-2 leading-snug">
                         I'm a huge fan of surrealist 80s and 90s horror movies. If you are a fan of films like <span class="font-black italic text-black">Prince of Darkness</span>, I'm your guy.
@@ -508,7 +508,7 @@
 
                 <div>
                     <h4 class="text-lg font-black uppercase tracking-widest flex items-center gap-2">
-                        <span class="text-2xl">☕</span> Current Hyperfixations
+                        Current Hyperfixations
                     </h4>
                     <p class="text-md font-medium text-gray-800 mt-2 leading-snug">
                         <span class="text-black font-bold">Quantitative Analysis of Financial Markets</span> and 
